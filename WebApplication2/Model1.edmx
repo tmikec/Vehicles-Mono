@@ -120,18 +120,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_VehicleModel_VehicleModel">
-          <End Role="VehicleModel" Type="Self.VehicleModel" Multiplicity="1" />
-          <End Role="VehicleModel1" Type="Self.VehicleModel" Multiplicity="0..1" />
-          <ReferentialConstraint>
-            <Principal Role="VehicleModel">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="VehicleModel1">
-              <PropertyRef Name="Id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityContainer Name="VehiclesEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="VehicleMakes" EntityType="Self.VehicleMake" />
           <EntitySet Name="VehicleModels" EntityType="Self.VehicleModel" />
@@ -140,10 +128,6 @@
             <End Role="VehicleMake1" EntitySet="VehicleMakes" />
           </AssociationSet>
           <AssociationSet Name="FK_VehicleMake" Association="Self.FK_VehicleMake">
-            <End Role="VehicleModel" EntitySet="VehicleModels" />
-            <End Role="VehicleModel1" EntitySet="VehicleModels" />
-          </AssociationSet>
-          <AssociationSet Name="FK_VehicleModel_VehicleModel" Association="Self.FK_VehicleModel_VehicleModel">
             <End Role="VehicleModel" EntitySet="VehicleModels" />
             <End Role="VehicleModel1" EntitySet="VehicleModels" />
           </AssociationSet>

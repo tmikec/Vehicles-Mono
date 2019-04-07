@@ -9,7 +9,6 @@
         <EntityTypeShape EntityType="Vehicles.VehicleModel" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <AssociationConnector Association="Vehicles.FK_VehicleMake_VehicleMake" ManuallyRouted="false" />
         <AssociationConnector Association="Vehicles.FK_VehicleMake" ManuallyRouted="false" />
-        <AssociationConnector Association="Vehicles.FK_VehicleModel_VehicleModel" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
